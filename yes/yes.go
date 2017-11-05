@@ -6,7 +6,7 @@ import (
 	s "strings"
 )
 
-const bufsize = 1024*64
+const bufsize = 1024 * 64
 
 func main() {
 	atom := "y\n"
@@ -15,7 +15,7 @@ func main() {
 		atom = s.Join(os.Args[1:], " ") + "\n"
 	}
 
-	buf := s.Repeat(atom, bufsize / len(atom))
+	buf := s.Repeat(atom, bufsize/len(atom))
 
 	for {
 		f.Print(buf)
